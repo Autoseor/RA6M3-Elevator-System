@@ -59,16 +59,22 @@ graph TD
 
 ## Project Structure
 ```text
-├── code/                   # RA6M3 e2 studio Project (C Source)
-│   ├── .settings/          # Project environment settings
-│   ├── ra/                 # FSP Library
-│   ├── ra_cfg/             # FSP Configuration Headers
-│   ├── ra_gen/             # FSP Generated Code
-│   ├── script/             # Linker Scripts
-│   ├── src/                # Elevator Logic & CAN Drivers
-│   ├── configuration.xml   # FSP Config File
-│   └── *.pincfg            # Pin Configuration
-├── pc-monitoring/          # PC GUI Source Code (CAN Monitor)
-├── docs/                   # Design Documents & Diagrams
-└── README.md               # Main Description
+├── code/                          # RA6M3 C 소스 코드 (e2 studio Project)
+│   ├── .settings/                 # 컴파일러 옵션 및 프로젝트 환경 설정 (숨김 폴더)
+│   ├── ra/                        # FSP 라이브러리 소스 및 드라이버 본체
+│   ├── ra_cfg/                    # FSP 구성(Configuration) 헤더 파일
+│   ├── ra_gen/                    # FSP에서 자동 생성한 설정 코드
+│   ├── script/                    # 링커 스크립트 (.ld) 등 빌드 관련 스크립트
+│   ├── src/                       # 엘리베이터 제어 로직 및 CAN 통신 드라이버
+│   ├── configuration.xml          # FSP 그래픽 설정 저장 파일
+│   └── R7FA6M3AH3CFC.pincfg       # MCU 핀 할당 설정 파일
+|
+├── docs/                          # 설계 문서 및 시스템 다이어그램
+│   ├── Hardware_Setup.md          # 회로 구성 및 하드웨어 연결 가이드
+│   ├── Communication_Protocol.md  # 통신 프로토콜 정의
+│   └── Software_Implementation.md # 소프트웨어 알고리즘 및 구현 방식
+|
+├── video/                         # 시스템 동작 및 엘리베이터 제어 시연 영상
+|
+└── README.md                      # 프로젝트 전체 개요 및 퀵 스타트 가이드
 ```
