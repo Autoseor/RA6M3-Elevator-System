@@ -39,12 +39,13 @@ graph TD
 ## 3. Peripheral Details
 
 ### 3.1 User Inputs & Indicators
-- Switch: 4개의 물리적 스위치를 통해 사용자의 층별 호출을 입력받습니다. 내부 풀업 저항을 사용하여 회로를 간소화했습니다.
-- LED & 7-Segment: 스위치 입력 시 즉각적인 LED 피드백(호출 확인)을 제공하며, 7-Segment는 다이내믹 스캐닝 기법을 통해 현재 엘리베이터의 층수를 실시간으로 표시합니다.
+- Switch: 4개의 스위치를 통해 사용자가 층별 호출 입력, 내부 풀업 저항을 사용해 회로 간소화
+- LED & 7-Segment: 스위치 입력 시 즉각적인 LED 피드백(호출 확인) 제공, 7-Segment는 다이내믹 스캐닝 기법을 통해 현재 엘리베이터의 층수를 실시간으로 표시
 
 ### 3.2 Motion Control (Motors)
-- DC Motor: GPT(General Purpose Timer)의 PWM 출력을 활용하여 승강기의 속도를 제어합니다. H-Bridge 드라이버와 연결되어 목표 층에 따른 정/역회전(상승/하강)을 수행합니다.
-- Servo Motor: 20ms(50Hz) 주기의 PWM 신호를 사용하여 엘리베이터 문의 개폐를 담당합니다. 도착 시 90도로 회전하여 문을 열고, 일정 시간 후 다시 0도로 닫히도록 설정되어 있습니다.
+- DC Motor: GPT(General Purpose Timer)의 PWM 출력을 활용하여 승강기의 속도 제어, H-Bridge 드라이버와 연결되어 목표 층에 따른 정/역회전(상승/하강) 수행
+- Servo Motor: 20ms(50Hz) 주기의 PWM 신호를 사용하여 엘리베이터 문 개폐 담당 [도착 시 90도로 회전(문 열림), 일정 시간 후 다시 0도로 회전(문 닫힘)]
 
 ### 3.3 Audio & Communication
-- DAC Speaker: 12-bit DAC를 사용하여 층 도착 시 부드러운 아날로그 파형의 안내 멜로디를 출력합니다.
+- DAC Speaker: 12-bit DAC를 사용하여 층 도착 시 알림음 출력
+
